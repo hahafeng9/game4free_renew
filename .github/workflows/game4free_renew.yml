@@ -48,6 +48,11 @@ jobs:
       - name: 🔧 安装 ChromeDriver
         run: seleniumbase install chromedriver
 
+      - name: 🌐 连接 Cloudflare WARP（干净出口 IP）
+        uses: fscarmen/warp-on-actions@v1.4
+        with:
+          stack: ipv4
+
       - name: 🚀 运行续期脚本
         env:
           PYTHONIOENCODING: utf-8
